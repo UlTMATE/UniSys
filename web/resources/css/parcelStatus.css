@@ -1,0 +1,45 @@
+/* 
+    Created on : 23 Jan, 2016, 4:11:37 PM
+    Author     : ultmate
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header, nav, body, section, footer{
+    display: block;
+}
+
+body{
+    background-color: #fff7a5;
+    cursor: default;
+}
+
+h2{
+    margin-top: 5%;
+    color: green;
+    text-align: center;
+    font: bold 2.5em calibri,tahoma,sans-serif;
+}
+
+table {
+    margin-top: 2em;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td{
+    width: 10%;
+}
+
+th {
+    background: black;
+    color: white;
+}
+
+tr:nth-child(2n){
+    background-color: #d3fff1;
+}

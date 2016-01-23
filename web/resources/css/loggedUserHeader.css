@@ -1,0 +1,24 @@
+/* 
+    Created on : 23 Jan, 2016, 3:55:02 PM
+    Author     : ultmate
+*/
+
+header{
+    background: #1e1f23;
+    box-shadow: 2px 2px 3px 2px #999355;
+    cursor: default;
+}
+
+#headerLogoDiv{
+    float: left;
+}
+
+#headerTitleDiv{
+    margin-left: 8%;
+    font: bold 1em sans-serif;
+    text-align: left;
+}
+
+#headerTitle{
+    color: #009f9d;
+}
