@@ -5,20 +5,67 @@
 
 <html>
     <head>
+        <link type="text/css" rel="stylesheet" href="<c:url value="resources/css/indexStyle.css" />" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet"
-              type="text/css"
-              href="<c:url value="/resources/css/indexStyle.css" />" >
-        <title>Welcome to Spring Web MVC project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>UniSYs Login</title>
     </head>
 
     <body>
-        <h1>StudServe</h1>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
+        <header>
+            <div id="headerRootDiv">
+                <div id="headerLogoDiv">
+                    <h1 class="headingText">US</h1>
+                </div>
+                <div id="headerTitleDiv">
+                    <h1 id="headerTitle">UNISYS</h1>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div id="loginDiv">
+                <form name="loginForm" method="POST" action="Login">
+                    <table>
+                        <tr>
+                            <td colspan="2" id="loginDivTitle"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="errorMsg">
+                                <%
+                                    Object errMsg = request.getAttribute("errorMsg");
+                                    if(errMsg != null) {
+                                        out.println(errMsg);
+                                    }
+                                %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fieldDescription">Roll No.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="studentId" placeholder="Roll No." maxlength="8"
+                                                   class="field" autocomplete="on" autofocus required/></td>
+                        </tr>
+                        <tr>
+                            <td class="fieldDescription">Password</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="password" name="pwd" placeholder="Password" 
+                                                   class="field" required/></td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td class="linkText"><a href="/Signup">Create Account</a></td>
+                            <td class="linkText"><a href="/ForgotPassword">Forgot Password</a></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Login" class="btn"/></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>
     </body>
 </html>
